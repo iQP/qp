@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{49715FD0-3CBC-4173-9299-BB2015AEE879}" Label="" LastModificationDate="1410508635" Name="admin" Objects="27" Symbols="23" Target="Analyse" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" signature="BPM_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{49715FD0-3CBC-4173-9299-BB2015AEE879}" Label="" LastModificationDate="1410446791" Name="admin" Objects="43" Symbols="39" Target="Analyse" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" signature="BPM_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1000,9 +1000,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:FlowSymbol>
 <o:FlowSymbol Id="o9">
 <a:CreationDate>1410444776</a:CreationDate>
-<a:ModificationDate>1410508635</a:ModificationDate>
-<a:Rect>((-16612,-8063), (112,3262))</a:Rect>
-<a:ListOfPoints>((-16612,3262),(112,-8063))</a:ListOfPoints>
+<a:ModificationDate>1410445629</a:ModificationDate>
+<a:Rect>((-16612,-7613), (-11362,3262))</a:Rect>
+<a:ListOfPoints>((-16612,3262),(-11362,-7613))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1100,9 +1100,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:FlowSymbol>
 <o:FlowSymbol Id="o24">
 <a:CreationDate>1410445246</a:CreationDate>
-<a:ModificationDate>1410508635</a:ModificationDate>
-<a:Rect>((-193,-8063), (269,4259))</a:Rect>
-<a:ListOfPoints>((-37,4259),(112,-8063))</a:ListOfPoints>
+<a:ModificationDate>1410445659</a:ModificationDate>
+<a:Rect>((-11362,-7613), (-37,4259))</a:Rect>
+<a:ListOfPoints>((-37,4259),(-11362,-7613))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1120,9 +1120,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:FlowSymbol>
 <o:FlowSymbol Id="o26">
 <a:CreationDate>1410445248</a:CreationDate>
-<a:ModificationDate>1410508635</a:ModificationDate>
-<a:Rect>((112,-8063), (20138,1987))</a:Rect>
-<a:ListOfPoints>((20138,1987),(112,-8063))</a:ListOfPoints>
+<a:ModificationDate>1410445662</a:ModificationDate>
+<a:Rect>((-11362,-7613), (20138,1987))</a:Rect>
+<a:ListOfPoints>((20138,1987),(-11362,-7613))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -1298,9 +1298,9 @@ LABL 0 Arial,8,N</a:FontList>
 </o:ProcessSymbol>
 <o:EndSymbol Id="o11">
 <a:CreationDate>1410444770</a:CreationDate>
-<a:ModificationDate>1410508635</a:ModificationDate>
+<a:ModificationDate>1410445629</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-637,-8813), (862,-7314))</a:Rect>
+<a:Rect>((-12112,-8363), (-10613,-6864))</a:Rect>
 <a:LineColor>12615680</a:LineColor>
 <a:FillColor>12615680</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
