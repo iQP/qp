@@ -1,0 +1,28 @@
+# Routes pour la génération d'un formulaire
+backend_form:
+    pattern:  /backend/form
+    defaults: { _controller: BackendFormBundle:Form:index }
+
+backend_form_new:
+    pattern:  /backend/form/new
+    defaults: { _controller: BackendFormBundle:Form:new }
+
+backend_form_create:
+    pattern:  /backend/form/create
+    defaults: { _controller: BackendFormBundle:Form:create }
+
+backend_form_show:
+    pattern:  /backend/form/{id}
+    defaults: { _controller: BackendFormBundle:Form/form }
+
+backend_form_delete:
+    pattern:  /backend/form/delete/{id}
+    defaults: { _controller: BackendFormBundle:Form:delete }
+
+backend_form_update:
+    pattern:  /backend/form/update/{id}
+    defaults: { _controller: BackendFormBundle:Form:update }
+
+backend_form_edit:
+    pattern:  /backend/form/{id}/edit
+    defaults: { _controller: BackendFormBundle:Form:edit }

@@ -1,0 +1,7 @@
+parameters:
+#    elements_text.example.class: Elements\TextBundle\Example
+
+services:
+#    elements_text.example:
+#        class: %elements_text.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

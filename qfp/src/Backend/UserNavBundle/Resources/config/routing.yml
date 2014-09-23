@@ -1,0 +1,3 @@
+backend_user_nav_homepage:
+    path:     /admin/usernav
+    defaults: { _controller: BackendUserNavBundle:UserNav:index }

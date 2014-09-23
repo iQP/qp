@@ -1,3 +1,27 @@
+backend_user_nav:
+    resource: "@BackendUserNavBundle/Resources/config/routing.yml"
+    prefix:   /
+
+backend_back:
+    resource: "@BackendBackBundle/Resources/config/routing.yml"
+    prefix:   /
+
+front_end_front:
+    resource: "@FrontEndFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+backend_form:
+    resource: "@BackendFormBundle/Resources/config/routing.yml"
+    prefix:   /
+
+elements_text:
+    resource: "@ElementsTextBundle/Resources/config/routing.yml"
+    prefix:   /
+
+backend_user:
+    resource: "@BackendUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 user_user:
     resource: "@UserUserBundle/Resources/config/routing.yml"
     prefix:   /
