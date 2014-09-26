@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{F0276A95-91A9-440E-873C-9B9CE801702F}" Label="" LastModificationDate="1411403480" Name="Question Generator" Objects="5" Symbols="0" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{F0276A95-91A9-440E-873C-9B9CE801702F}" Label="" LastModificationDate="1411652621" Name="Question Generator" Objects="6" Symbols="0" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -488,6 +488,19 @@ Shadow=0</a:DisplayPreferences>
 <a:Extension>mpm</a:Extension>
 <a:ModelDocument.ModelID>C24812C3-44AB-40C9-AB06-8D61F6FDD9B2</a:ModelDocument.ModelID>
 <a:ModelClassID>3D3C409C-B60D-430E-A1C4-B880653AC634</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o7">
+<a:ObjectID>1D5E7FED-FD89-4FE0-A09D-F35D282D9316</a:ObjectID>
+<a:Name>Diagramme de classes UML_1</a:Name>
+<a:Code>Diagramme_de_classes_UML_1</a:Code>
+<a:CreationDate>1411652550</a:CreationDate>
+<a:Creator>KNS3W</a:Creator>
+<a:ModificationDate>1411652621</a:ModificationDate>
+<a:Modifier>KNS3W</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/Diagramme de classes UML_1.moo</a:Location>
+<a:Extension>moo</a:Extension>
+<a:ModelDocument.ModelID>BB5FE414-E8E5-4F12-9A0A-B5C0058B7EDB</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
 </c:ModelsAndFiles>
 </o:Project>

@@ -1,7 +1,0 @@
-parameters:
-#    forms_answer.example.class: Forms\AnswerBundle\Example
-
-services:
-#    forms_answer.example:
-#        class: %forms_answer.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

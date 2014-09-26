@@ -21,9 +21,6 @@ class AppKernel extends Kernel
             new FrontEnd\FrontBundle\FrontEndFrontBundle(),
             new Backend\BackBundle\BackendBackBundle(),
             new Backend\UserNavBundle\BackendUserNavBundle(),
-            new Forms\FormBundle\FormsFormBundle(),
-            new Forms\QuestionBundle\FormsQuestionBundle(),
-            new Forms\AnswerBundle\FormsAnswerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
