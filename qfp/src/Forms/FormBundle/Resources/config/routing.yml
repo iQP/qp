@@ -1,0 +1,27 @@
+f_form:
+    pattern:  /f/form
+    defaults: { _controller: FormsFormBundle:Form:index }
+
+f_form_new:
+    pattern:  /f/form/new
+    defaults: { _controller: FormsFormBundle:Form:new }
+
+f_form_create:
+    pattern:  /f/form/create
+    defaults: { _controller: FormsFormBundle:Form:create }
+
+f_form_show:
+    pattern:  /f/form/{id}
+    defaults: { _controller: FormsFormBundle:Form:show }
+
+f_form_delete:
+    pattern:  /f/form/delete/{id}
+    defaults: { _controller: FormsFormBundle:Form:delete }
+
+f_form_update:
+    pattern:  /f/form/update/{id}
+    defaults: { _controller: FormsFormBundle:Form:update }
+
+f_form_edit:
+    pattern:  /f/form/{id}/edit
+    defaults: { _controller: FormsFormBundle:Form:edit }

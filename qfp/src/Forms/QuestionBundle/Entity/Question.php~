@@ -1,0 +1,42 @@
+<?php
+
+namespace Forms\QuestionBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Question
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Forms\QuestionBundle\Entity\QuestionRepository")
+ */
+class Question
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="question", type="text")
+     */
+    private $question;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Forms\FormBundle\Entity\Form", inversedBy="question")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $form;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Forms\QuestionBundle\Entity\Type")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $type;
+}

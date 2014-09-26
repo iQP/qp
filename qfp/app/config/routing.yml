@@ -1,3 +1,15 @@
+forms_answer:
+    resource: "@FormsAnswerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+forms_question:
+    resource: "@FormsQuestionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+forms_form:
+    resource: "@FormsFormBundle/Resources/config/routing.yml"
+    prefix:   /
+
 backend_user_nav:
     resource: "@BackendUserNavBundle/Resources/config/routing.yml"
     prefix:   /
@@ -8,18 +20,6 @@ backend_back:
 
 front_end_front:
     resource: "@FrontEndFrontBundle/Resources/config/routing.yml"
-    prefix:   /
-
-backend_form:
-    resource: "@BackendFormBundle/Resources/config/routing.yml"
-    prefix:   /
-
-elements_text:
-    resource: "@ElementsTextBundle/Resources/config/routing.yml"
-    prefix:   /
-
-backend_user:
-    resource: "@BackendUserBundle/Resources/config/routing.yml"
     prefix:   /
 
 user_user:

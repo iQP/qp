@@ -18,12 +18,12 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new User\UserBundle\UserUserBundle(),
-            new Backend\UserBundle\BackendUserBundle(),
-            new Elements\TextBundle\ElementsTextBundle(),
-            new Backend\FormBundle\BackendFormBundle(),
             new FrontEnd\FrontBundle\FrontEndFrontBundle(),
             new Backend\BackBundle\BackendBackBundle(),
             new Backend\UserNavBundle\BackendUserNavBundle(),
+            new Forms\FormBundle\FormsFormBundle(),
+            new Forms\QuestionBundle\FormsQuestionBundle(),
+            new Forms\AnswerBundle\FormsAnswerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
