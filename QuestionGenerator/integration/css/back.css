@@ -1,31 +1,76 @@
-/* line 2, ../sass/back.scss */
+/* line 3, ../sass/back.scss */
+body {
+  color: red;
+}
+
+/* line 7, ../sass/back.scss */
+h1 {
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+/* line 14, ../sass/back.scss */
+h2 {
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+/* line 21, ../sass/back.scss */
+nav {
+  display: block;
+  background: #eae9f4;
+  margin-bottom: 30px;
+}
+/* line 29, ../sass/back.scss */
+nav ul li {
+  display: inline-block;
+  margin-right: 25px;
+  padding: 10px 0;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+/* line 37, ../sass/back.scss */
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* line 44, ../sass/back.scss */
 .mini-nav {
   position: relative;
-  top: 35%;
   float: right;
-  font-size: 1.1em;
-  padding-top: 13px;
+  font-size: 0.9em;
+  padding: 8px 30px;
+  margin: 8px 0 0;
+  color: red;
+  background: #eae9f4;
 }
-/* line 11, ../sass/back.scss */
+/* line 55, ../sass/back.scss */
+.mini-nav ul {
+  display: block;
+  text-align: center;
+}
+/* line 59, ../sass/back.scss */
 .mini-nav ul li {
   display: inline-block;
   padding: 0 15px;
   border-right: 1px solid black;
 }
-/* line 17, ../sass/back.scss */
+/* line 65, ../sass/back.scss */
 .mini-nav ul li:first-child {
   padding-left: 0;
 }
-/* line 22, ../sass/back.scss */
+/* line 70, ../sass/back.scss */
 .mini-nav ul li:last-child {
   border-right: 0;
+  padding-right: 0;
 }
 
-/* line 34, ../sass/back.scss */
+/* line 83, ../sass/back.scss */
 #bk-home nav ul {
   text-align: center;
 }
-/* line 37, ../sass/back.scss */
+/* line 86, ../sass/back.scss */
 #bk-home nav ul li {
   display: inline-block;
   width: 28%;
@@ -42,32 +87,26 @@
   min-width: 150px;
   font-weight: bold;
 }
-/* line 54, ../sass/back.scss */
+/* line 103, ../sass/back.scss */
 #bk-home nav ul li:hover {
   color: #ff3232;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 60, ../sass/back.scss */
+/* line 109, ../sass/back.scss */
 #bk-home nav ul li a {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-/* line 70, ../sass/back.scss */
+/* line 119, ../sass/back.scss */
 #bk-home .results {
   margin-top: 30px;
 }
-/* line 73, ../sass/back.scss */
-#bk-home .results h2 {
-  font-size: 1.2em;
-  text-decoration: underline;
-  color: red;
-}
-/* line 80, ../sass/back.scss */
+/* line 123, ../sass/back.scss */
 #bk-home .results .result {
   margin: 0 1.5%;
 }
-/* line 85, ../sass/back.scss */
+/* line 128, ../sass/back.scss */
 #bk-home .results .view-results {
   padding: 15px 5px;
   margin: 5px 0 15px;

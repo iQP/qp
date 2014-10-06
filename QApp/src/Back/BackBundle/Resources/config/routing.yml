@@ -1,0 +1,8 @@
+back_home:
+    defaults: { _controller: 'BackBackBundle:Back:index' }
+    path: /
+
+
+test_new:
+    defaults: { _controller: 'BackBackBundle:Test:new' }
+    path: /test/new

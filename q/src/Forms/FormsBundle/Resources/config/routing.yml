@@ -1,0 +1,57 @@
+f_form:
+    pattern:  /f/form/
+    defaults: { _controller: FormsFormsBundle:Form:index }
+
+f_form_new:
+    pattern:  /f/form/new/
+    defaults: { _controller: FormsFormsBundle:Form:new }
+
+f_form_create:
+    pattern:  /f/form/create/
+    defaults: { _controller: FormsFormsBundle:Form:create }
+
+f_form_show:
+    pattern:  /f/form/{id}/
+    defaults: { _controller: FormsFormsBundle:Form:show }
+
+f_form_delete:
+    pattern:  /f/form/delete/{id}/
+    defaults: { _controller: FormsFormsBundle:Form:delete }
+
+f_form_update:
+    pattern:  /f/form/update/{id}/
+    defaults: { _controller: FormsFormsBundle:Form:update }
+
+f_form_edit:
+    pattern:  /f/form/{id}/edit/
+    defaults: { _controller: FormsFormsBundle:Form:edit }
+
+
+f_formcategory:
+    pattern:  /f/formcategory/
+    defaults: { _controller: FormsFormsBundle:FormCategory:index }
+
+f_formcategory_new:
+    pattern:  /f/formcategory/new/
+    defaults: { _controller: FormsFormsBundle:FormCategory:new }
+
+f_formcategory_create:
+    pattern:  /f/formcategory/create/
+    defaults: { _controller: FormsFormsBundle:FormCategory:create }
+
+f_formcategory_show:
+    pattern:  /f/formcategory/{id}/
+    defaults: { _controller: FormsFormsBundle:FormCategory:show }
+
+f_formcategory_delete:
+    pattern:  /f/formcategory/delete/{id}/
+    defaults: { _controller: FormsFormsBundle:FormCategory:delete }
+
+f_formcategory_update:
+    pattern:  /f/formcategory/update/{id}/
+    defaults: { _controller: FormsFormsBundle:FormCategory:update }
+
+f_formcategory_edit:
+    pattern:  /f/formcategory/{id}/edit/
+    defaults: { _controller: FormsFormsBundle:FormCategory:edit }
+

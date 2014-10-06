@@ -1,0 +1,40 @@
+<?php
+
+namespace Forms\FormBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Form
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Forms\FormBundle\Entity\FormRepository")
+ */
+class Form
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Forms\FormBundle\Entity\FormCategory")
+     */
+    private $formCategory;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Forms\QuestionBundle\Entity\TextQuestion", mappedBy="form")
+     */
+    private $textQuestion;
+}

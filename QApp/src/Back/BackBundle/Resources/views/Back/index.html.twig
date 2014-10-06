@@ -1,0 +1,47 @@
+{% extends 'BackBackBundle::layout.html.twig' %}
+
+{% block body %}
+
+<div id="bk-home">
+
+    <div class="content">
+        <nav>
+            <ul>
+                <li><a href="{{ path('test_new') }}">Tests</a></li>
+                <li><a href="#">polls</a></li>
+                <li><a href="#">forms</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="results">
+        <div class="content">
+            <div class="tests result">
+                <h2><a href="#">Tests</a></h2>
+                <div class="view-results">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis optio error ratione labore, libero dicta possimus assumenda dolor iusto. Perspiciatis ab deleniti sequi eaque quidem aspernatur molestiae facilis necessitatibus modi.
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="polls result">
+                <h2><a href="#">Polls</a></h2>
+                <div class="view-results">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis optio error ratione labore, libero dicta possimus assumenda dolor iusto. Perspiciatis ab deleniti sequi eaque quidem aspernatur molestiae facilis necessitatibus modi.
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="forms result">
+                <h2><a href="#">Forms</a></h2>
+                <div class="view-results">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis optio error ratione labore, libero dicta possimus assumenda dolor iusto. Perspiciatis ab deleniti sequi eaque quidem aspernatur molestiae facilis necessitatibus modi.
+                </div>
+            </div>
+        </div>
+    </div> <!-- End .results -->
+
+</div><!--  End #bk-home -->
+    
+{% endblock %}

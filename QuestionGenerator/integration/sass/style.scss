@@ -2,7 +2,20 @@
 @import "compass/reset";
 @import "includes/vars";
 
-*{ box-sizing:border-box;}
+*
+{
+	box-sizing:border-box;
+}
+
+
+@font-face {
+  font-family: "CopperplateGothic-Light";
+  src: url('fonts/CopperplateGothic-Light.woff?1411386536') format('woff'), url('fonts/CopperplateGothic-Light.ttf?1411386534') format('truetype'), url('fonts/CopperplateGothic-Light.svg?1411386536') format('svg'), url('fonts/CopperplateGothic-Light.eot?1411386534') format('embedded-opentype');
+}
+body
+{
+	font-family: "CopperplateGothic-Light";
+}
 .clear
 {
 	clear: both;
@@ -22,14 +35,17 @@ a,a:visited, a:hover, a:active
 header
 {
 	height: 50px;
-	background:rgba(0,0,0,0.5);
 	position: relative;
 	margin-bottom: 30px;
+	margin-top: 10px;
+
+	max-height: 50px;
+	overflow: hidden;
 }
 .logo
 {
 	font-size: 50px;
-	font-family: 'Helvetica', "Trebuchet MS", Tahoma, sans-serif;
+	// font-family: 'Helvetica', "Trebuchet MS", Tahoma, sans-serif;
 	text-transform: uppercase;
 	float: left;
 	height: 50px;

@@ -1,0 +1,222 @@
+{% extends 'BackBackBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Form creation</h1>
+
+    {{ form(form) }}
+
+    <a href="#" class="add_textq clear" style="padding:5px;line-height:28px;">Ajouter une question de type texte</a>
+
+
+    <a href="#" class="add_qcmq clear" style="padding:5px;line-height:28px;">Ajouter une question de type QCM</a>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        // On récupère la balise div en question qui contient l'attribut "data-prototype"
+        var $container_textq = $('div#forms_formbundle_form_textq');
+        var $container_qcmq = $('div#forms_formbundle_form_qcmq');
+
+        // On ajouter un nouveau champ à chaque clic sur le lien d'ajout
+        $('a.add_textq').click(function(e){
+          addTextq($container_textq);
+          e.preventDefault();
+          return false;
+        });
+
+        $('a.add_qcmq').click(function(e){
+          addQcmq($container_qcmq);
+          e.preventDefault();
+          return false;
+        });
+
+        // On définit un compteur unique pour nommer les chmps qu'on va ajouter
+        var index_textq = $container_textq.find(':input').length;
+        var index_qcmq = $container_qcmq.find(':input').length;
+
+        var index = index_textq + index_qcmq;
+
+
+        function addTextq($container_textq)
+        {
+          var $prototype_textq = $($container_textq.attr('data-prototype').replace(/__name__label__/g, 'Question Texte n°' + (index_textq+1)));
+
+          addDeleteLink($prototype_textq);
+
+          $container_textq.append($prototype_textq);
+
+          index++;
+          index_textq++;
+        }
+
+        function addQcmq($container_qcmq)
+        {
+          var $add_qcma = $('<a href="#" class="add_qcma">Ajouter une option de réponse</a>');
+
+          var $prototype_qcmq = $($container_qcmq.attr('data-prototype').replace(/__name__label__/g, 'Question QCM n°' + (index+1)).replace(/__name__/g, index));
+
+          addDeleteLink($prototype_qcmq);
+
+          $container_qcmq.append($prototype_qcmq).append($add_qcma);
+
+          index++;
+          index_qcmq++;
+
+          var $container_qcma = $('div#forms_formbundle_form_qcmq_' + (index_qcmq-1) + '_qcma');
+          $('a.add_qcma').click(function(e){
+            addQcma($container_qcma);
+            e.preventDefault();
+            return false;
+          });
+
+          var index_qcma = $container_qcma.find(':input').length;
+
+          function addQcma($container_qcma)
+          {
+            var $prototype_qcma = $($container_qcma).attr('data-prototype').replace(/__qcma__label__/g,'Réponse n°' + (index_qcma+1)).replace(/__qcma__/g, index_qcma);
+
+            $container_qcma.append($prototype_qcma);
+
+            index_qcma++;
+          }
+
+        }
+
+
+        function addDeleteLink($prototype)
+        {
+          $deleteLink = $('<a href="#" class""> Supprimer</a>');
+
+          $prototype.append($deleteLink);
+
+          $deleteLink.click(function(e){
+            $prototype.remove();
+            e.preventDefault();
+            return false;
+          })
+        }
+
+      });
+    </script>
+
+
+<script type="text/javascript">
+//   $(document).ready(function() {
+//     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+//     var $container_textq = $('div#forms_formbundle_form_textq');
+// // rajoute pour la partie qcm
+//     var $container_qcmq = $('div#forms_formbundle_form_qcmq');
+
+//     // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+//     $('a.add_textq').click(function(e) {
+//       addTextq($container_textq);
+//       e.preventDefault(); 
+//       return false;
+//     });
+
+//   // rajoute pour la partie qcm
+//     $('a.add_qcmq').click(function(e){
+//         addQcmq($container_qcmq);
+//         e.preventDefault();
+//         return false;
+//     });
+
+
+//     // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+//     var index = $container_textq.find(':input').length;
+
+//     var index_qcmq = $container_qcmq.find(':input').length;
+
+//     // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
+//     // if (index == 0) {
+//     //   addTextq($container_textq);
+//     // } else {
+//     //   // Pour chaque catégorie déjà existante, on ajoute un lien de suppression
+//     //   $container_textq.children('div').each(function() {
+//     //     addDeleteLink($(this));
+//     //   });
+//     // }
+
+//     // La fonction qui ajoute un formulaire Categorie
+//     function addTextq($container_textq) {
+//       // Dans le contenu de l'attribut « data-prototype », on remplace :
+//       // - le texte "__name__label__" qu'il contient par le label du champ
+//       // - le texte "__name__" qu'il contient par le numéro du champ
+//       var $prototype = $($container_textq.attr('data-prototype').replace(/__name__label__/g, 'Question de type Texte n°' + (index+1))
+//           .replace(/__name__/g, index));
+
+//       // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+//       addDeleteLink($prototype);
+
+//       // On ajoute le prototype modifié à la fin de la balise <div>
+//       $container_textq.append($prototype);
+
+//       // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+//       index++;
+//     }
+
+//     function addQcmq($container_qcmq)
+//     {
+//       var $add_qcma = $('<a href="#" class="add_qcma">Ajouter une option de réponse</a>');
+
+
+//       var $prototype_qcmq = $($container_qcmq.attr('data-prototype').replace(/__name__label__/g, 'Question de type QCM n° ' + (index+1)).replace(/__name__/g, index));
+
+//       addDeleteLink($prototype_qcmq);
+//       $container_qcmq.append($prototype_qcmq).append($add_qcma);
+
+//       index++;
+//       index_qcmq++;
+
+      
+// // section pour ajouter les réponses qcm ---------------------
+//       var $container_qcma = $('div#forms_formbundle_form_qcmq_' + (index_qcmq-1) + '_qcma');
+
+
+//       $('a.add_qcma').click(function(e){
+//         addQcma($container_qcma);
+//         e.preventDefault();
+//         return false;
+//       });
+
+//       var index_qcma = $container_qcma.find(':input').length;
+
+//       function addQcma($container_qcma)
+//       {
+//         var $prototype_qcma = $($container_qcma).attr('data-prototype').replace(/__qcma__label__/g, 'Réponse n°' + (index_qcma+1)).replace(/__qcma__/g, index_qcma);
+
+
+
+//         $container_qcma.append($prototype_qcma);
+
+//         index_qcma++;
+// // fin section pour ajouter les réponses qcm -----------------
+//       }
+
+//     }
+
+//     // La fonction qui ajoute un lien de suppression d'une catégorie
+//     function addDeleteLink($prototype) {
+//       // Création du lien
+//       $deleteLink = $('<a href="#" class="">Supprimer</a>');
+
+//       // Ajout du lien
+//       $prototype.append($deleteLink);
+
+//       // Ajout du listener sur le clic du lien
+//       $deleteLink.click(function(e) {
+//         $prototype.remove();
+//         e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+//         return false;
+//       });
+//     }
+//   });
+</script>
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('f_form') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,3 @@
+user_group_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: UserGroupBundle:Default:index }

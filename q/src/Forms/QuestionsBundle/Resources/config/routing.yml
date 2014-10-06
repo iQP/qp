@@ -1,0 +1,55 @@
+f_question:
+    pattern:  /f/question/
+    defaults: { _controller: FormsQuestionsBundle:Question:index }
+
+f_question_new:
+    pattern:  /f/question/new/
+    defaults: { _controller: FormsQuestionsBundle:Question:new }
+
+f_question_create:
+    pattern:  /f/question/create/
+    defaults: { _controller: FormsQuestionsBundle:Question:create }
+
+f_question_show:
+    pattern:  /f/question/{id}/
+    defaults: { _controller: FormsQuestionsBundle:Question:show }
+
+f_question_delete:
+    pattern:  /f/question/delete/{id}/
+    defaults: { _controller: FormsQuestionsBundle:Question:delete }
+
+f_question_update:
+    pattern:  /f/question/update/{id}/
+    defaults: { _controller: FormsQuestionsBundle:Question:update }
+
+f_question_edit:
+    pattern:  /f/question/{id}/edit/
+    defaults: { _controller: FormsQuestionsBundle:Question:edit }
+
+f_questionstyle:
+    pattern:  /f/questionstyle/
+    defaults: { _controller: FormsQuestionsBundle:QuestionStyle:index }
+
+f_questionstyle_new:
+    pattern:  /f/questionstyle/new/
+    defaults: { _controller: FormsQuestionsBundle:QuestionStyle:new }
+
+f_questionstyle_create:
+    pattern:  /f/questionstyle/create/
+    defaults: { _controller: FormsQuestionsBundle:QuestionStyle:create }
+
+f_questionstyle_show:
+    pattern:  /f/questionstyle/{id}/
+    defaults: { _controller: FormsQuestionsBundle:QuestionStyle:show }
+
+f_questionstyle_delete:
+    pattern:  /f/questionstyle/delete/{id}/
+    defaults: { _controller: FormsQuestionsBundle:QuestionStyle:delete }
+
+f_questionstyle_update:
+    pattern:  /f/questionstyle/update/{id}/
+    defaults: { _controller: FormsQuestionsBundle:QuestionStyle:update }
+
+f_questionstyle_edit:
+    pattern:  /f/questionstyle/{id}/edit/
+    defaults: { _controller: FormsQuestionsBundle:QuestionStyle:edit }

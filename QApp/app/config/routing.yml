@@ -1,0 +1,41 @@
+forms_filter:
+    resource: "@FormsFilterBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user_group:
+    resource: "@UserGroupBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user_user:
+    resource: "@UserUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+front_front:
+    resource: "@FrontFrontBundle/Resources/config/routing.yml"
+    prefix:   /front
+
+back_back:
+    resource: "@BackBackBundle/Resources/config/routing.yml"
+    prefix:   /back
+
+forms_answer:
+    resource: "@FormsAnswerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+forms_question:
+    resource: "@FormsQuestionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+forms_form:
+    resource: "@FormsFormBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Added for fos user bundle
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+fos_user_group:
+    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+    prefix: /group
+
+# -----------------End Fos user bundle ------------------------

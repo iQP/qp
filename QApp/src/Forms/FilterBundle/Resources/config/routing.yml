@@ -1,0 +1,117 @@
+f_formdomain:
+    pattern:  /f/formdomain/
+    defaults: { _controller: FormsFilterBundle:FormDomain:index }
+
+f_formdomain_new:
+    pattern:  /f/formdomain/new/
+    defaults: { _controller: FormsFilterBundle:FormDomain:new }
+
+f_formdomain_create:
+    pattern:  /f/formdomain/create/
+    defaults: { _controller: FormsFilterBundle:FormDomain:create }
+
+f_formdomain_show:
+    pattern:  /f/formdomain/{id}/
+    defaults: { _controller: FormsFilterBundle:FormDomain:show }
+
+f_formdomain_delete:
+    pattern:  /f/formdomain/delete/{id}/
+    defaults: { _controller: FormsFilterBundle:FormDomain:delete }
+
+f_formdomain_update:
+    pattern:  /f/formdomain/update/{id}/
+    defaults: { _controller: FormsFilterBundle:FormDomain:update }
+
+f_formdomain_edit:
+    pattern:  /f/formdomain/{id}/edit/
+    defaults: { _controller: FormsFilterBundle:FormDomain:edit }
+
+f_formcategory:
+    pattern:  /f/formcategory/
+    defaults: { _controller: FormsFilterBundle:FormCategory:index }
+
+f_formcategory_new:
+    pattern:  /f/formcategory/new/
+    defaults: { _controller: FormsFilterBundle:FormCategory:new }
+
+f_formcategory_create:
+    pattern:  /f/formcategory/create/
+    defaults: { _controller: FormsFilterBundle:FormCategory:create }
+
+f_formcategory_show:
+    pattern:  /f/formcategory/{id}/
+    defaults: { _controller: FormsFilterBundle:FormCategory:show }
+
+f_formcategory_delete:
+    pattern:  /f/formcategory/delete/{id}/
+    defaults: { _controller: FormsFilterBundle:FormCategory:delete }
+
+f_formcategory_update:
+    pattern:  /f/formcategory/update/{id}/
+    defaults: { _controller: FormsFilterBundle:FormCategory:update }
+
+f_formcategory_edit:
+    pattern:  /f/formcategory/{id}/edit/
+    defaults: { _controller: FormsFilterBundle:FormCategory:edit }
+
+
+
+
+
+
+f_questiondomain:
+    pattern:  /f/questiondomain/
+    defaults: { _controller: FormsFilterBundle:QuestionDomain:index }
+
+f_questiondomain_new:
+    pattern:  /f/questiondomain/new/
+    defaults: { _controller: FormsFilterBundle:QuestionDomain:new }
+
+f_questiondomain_create:
+    pattern:  /f/questiondomain/create/
+    defaults: { _controller: FormsFilterBundle:QuestionDomain:create }
+
+f_questiondomain_show:
+    pattern:  /f/questiondomain/{id}/
+    defaults: { _controller: FormsFilterBundle:QuestionDomain:show }
+
+f_questiondomain_delete:
+    pattern:  /f/questiondomain/delete/{id}/
+    defaults: { _controller: FormsFilterBundle:QuestionDomain:delete }
+
+f_questiondomain_update:
+    pattern:  /f/questiondomain/update/{id}/
+    defaults: { _controller: FormsFilterBundle:QuestionDomain:update }
+
+f_questiondomain_edit:
+    pattern:  /f/questiondomain/{id}/edit/
+    defaults: { _controller: FormsFilterBundle:QuestionDomain:edit }
+
+f_questioncategory:
+    pattern:  /f/questioncategory/
+    defaults: { _controller: FormsFilterBundle:QuestionCategory:index }
+
+f_questioncategory_new:
+    pattern:  /f/questioncategory/new/
+    defaults: { _controller: FormsFilterBundle:QuestionCategory:new }
+
+f_questioncategory_create:
+    pattern:  /f/questioncategory/create/
+    defaults: { _controller: FormsFilterBundle:QuestionCategory:create }
+
+f_questioncategory_show:
+    pattern:  /f/questioncategory/{id}/
+    defaults: { _controller: FormsFilterBundle:QuestionCategory:show }
+
+f_questioncategory_delete:
+    pattern:  /f/questioncategory/delete/{id}/
+    defaults: { _controller: FormsFilterBundle:QuestionCategory:delete }
+
+f_questioncategory_update:
+    pattern:  /f/questioncategory/update/{id}/
+    defaults: { _controller: FormsFilterBundle:QuestionCategory:update }
+
+f_questioncategory_edit:
+    pattern:  /f/questioncategory/{id}/edit/
+    defaults: { _controller: FormsFilterBundle:QuestionCategory:edit }
+

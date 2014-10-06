@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>QcmQ creation</h1>
+
+    {{ form(form) }}
+
+    <a href="#" class="add_qcma">Ajouter une réponse</a>
+
+
+    <script>
+	    $('a.add_qcma').on('click', function(event){
+	        event.preventDefault();
+	        
+	        var collectionHolder = $('#forms_questionbundle_qcmq_qcma');
+	        var prototype = collectionHolder.attr('data-prototype');
+	        form = prototype.replace(/__name__/g, collectionHolder.children().length);
+	        collectionHolder.append(form);
+	    });
+	</script>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('f_qcmq') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

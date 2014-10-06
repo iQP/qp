@@ -1,0 +1,28 @@
+f_qcmq:
+    pattern:  /f/qcmq/
+    defaults: { _controller: FormsQuestionBundle:QcmQ:index }
+
+f_qcmq_new:
+    pattern:  /f/qcmq/new/
+    defaults: { _controller: FormsQuestionBundle:QcmQ:new }
+
+f_qcmq_create:
+    pattern:  /f/qcmq/create/
+    defaults: { _controller: FormsQuestionBundle:QcmQ:create }
+
+f_qcmq_show:
+    pattern:  /f/qcmq/{id}/
+    defaults: { _controller: FormsQuestionBundle:QcmQ:show }
+
+f_qcmq_delete:
+    pattern:  /f/qcmq/delete/{id}/
+    defaults: { _controller: FormsQuestionBundle:QcmQ:delete }
+
+f_qcmq_update:
+    pattern:  /f/qcmq/update/{id}/
+    defaults: { _controller: FormsQuestionBundle:QcmQ:update }
+
+f_qcmq_edit:
+    pattern:  /f/qcmq/{id}/edit/
+    defaults: { _controller: FormsQuestionBundle:QcmQ:edit }
+

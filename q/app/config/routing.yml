@@ -1,0 +1,8 @@
+forms_questions:
+    resource: "@FormsQuestionsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+forms_forms:
+    resource: "@FormsFormsBundle/Resources/config/routing.yml"
+    prefix:   /
+
