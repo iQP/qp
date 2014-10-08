@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>01_index.html</title>
+    <title>02_create_test.html</title>
 
     <meta charset="UTF-8">
 
@@ -50,7 +50,7 @@
 
 
         <div class="test-info">
-            <h1>Création d'un nouveau Test</h1>
+            <!-- <h1>Création d'un nouveau Test</h1> -->
             <form action="#">
                 <div>
                     <div>
@@ -58,34 +58,96 @@
                         <input type="text" placeholder="Nom du test">
                     </div>
 
-                    <div>
+                    <div class="subsidiary">
                         <label for="">Catégorie</label>
                         <select name="" id="">
                             <option value="0">Choisissez une catégorie</option>
                         </select>
-                    </div>
-                    
-                    <div>
                         
-                        <label for="time">Temps de réponse</label>
-                        <div>
-                            <select name="" id="">
-                                <option value="0">00</option>
-                            </select>
-                            <select name="" id="">
-                                <option value="0">00</option>
+                        <label for="time" class="time_label">Temps de réponse</label>
+                        
+                        <select name="" id="">
+                            <option value="0">00</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="0">00</option>
+                        </select>
+                    </div>
+
+
+                    <div class="new-question">
+                        <a href="#" class="ico-del"><i></i></a>
+                        <h1>Question N° 1</h1>
+
+                        <textarea name="" id="" cols="30" rows="10">Saisissez votre question ici</textarea>
+
+                        <div class="category">
+                            <label for="cat">Catégorie </label>
+                            <select name="" id="" class="subsidiary">
+                                <option value="0">(Facultatif)</option>
+                                <option value="0">Champs</option>
                             </select>
                         </div>
-                    </div>
+
+                        <div class="ans-type">
+                            <span class="ans-type">Type de réponse texte court</span>
+                        </div>
+
+                    </div><!-- end new-question -->
+
+
+                    <div class="new-question">
+                        <a href="#" class="ico-del"><i></i></a>
+                        <h1>Question N° 2</h1>
+
+                        <textarea name="" id="" cols="30" rows="10">Saisissez votre question ici</textarea>
+
+                        <div class="category">
+                            <label for="cat">Catégorie </label>
+                            <select name="" id="" class="subsidiary">
+                                <option value="0">(Facultatif)</option>
+                                <option value="0">Champs</option>
+                            </select>
+                        </div>
+
+                        <div class="ans-type">
+                            <span class="ans-type">Type de réponse texte long</span>
+                        </div>
+
+                    </div><!-- end new-question -->
+
+
+                    <div class="new-question">
+                        <a href="#" class="ico-del"><i></i></a>
+                        <h1>Question N° 2</h1>
+
+                        <textarea name="" id="" cols="30" rows="10">Saisissez votre question ici</textarea>
+
+                        <div class="category">
+                            <label for="cat">Catégorie </label>
+                            <select name="" id="" class="subsidiary">
+                                <option value="0">(Facultatif)</option>
+                                <option value="0">Champs</option>
+                            </select>
+                        </div>
+
+                        <div class="ans-type">
+                            <span class="ans-type">Type de réponse texte long</span>
+                        </div>
+
+                    </div><!-- end new-question -->
+
+
 
                     <div class="link-buttons">
-                        <a href="#">Ajouter une question Texte court</a>
-                        <a href="#">Ajouter une question Texte Long</a>
-                        <a href="#">Ajouter une question Qcm</a>
+                        <a href="#" class="btn">Ajouter une question Texte court</a>
+                        <a href="#" class="btn">Ajouter une question Texte Long</a>
+                        <a href="#" class="btn">Ajouter une question Qcm</a>
+                        <a href="#" class="btn">Ajouter une question Qcm</a>
                     </div>
 
                     <div>
-                        <button type="submit" id="" name="">Créer le questionnaire</button>
+                        <button type="submit" id="create-form" name="create-form" class="btn submit">Créer le questionnaire</button>
                     </div>
                 </div>
             </form>

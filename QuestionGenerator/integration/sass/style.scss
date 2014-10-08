@@ -30,6 +30,37 @@ a,a:visited, a:hover, a:active
 {
 	max-width: $content_max_width;
 	margin: 0 auto;
+	width:97%;
+}
+
+.btn
+{
+	display: inline-block;
+	text-align: center;
+	border:none;
+	outline: none;
+	cursor: pointer;
+}
+
+.submit
+{
+	background:$submit_bg;
+	color:$main_color;
+	padding: 10px;
+	@include border-radius(5px);
+	font-size: 1.1em;
+	font-family: "CopperplateGothic-Light";
+}
+
+select
+{
+	background:transparent;
+}
+
+textarea
+{
+	border:none;
+	outline: none;
 }
 
 header

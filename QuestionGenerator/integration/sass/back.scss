@@ -1,4 +1,6 @@
 @import 'includes/back_vars';
+@import 'compass';
+
 
 body
 {
@@ -22,7 +24,7 @@ nav
 {
 	display: block;
 	background:$main_bg;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 
 	ul
 	{
@@ -74,6 +76,37 @@ nav
 			}
 		}
 	}
+}
+
+form
+{
+	line-height: 1.8em;
+	label
+	{
+		display: inline-block;
+		margin-right: 15px;
+		font-size: 1.1em;
+	}
+
+	input[type=text], input[type=password], input[type=email]
+	{
+		border:none;
+		outline: 1px solid rgba(255, 0, 0, 0.4);
+		padding: 5px;
+		color: #6795cb;
+	}
+
+	select
+	{
+		border:none;
+		outline: 1px solid rgba(255, 0, 0, 0.4);
+		padding: 0 5px;
+	}
+}
+
+form > div > div:first-child
+{
+	margin-bottom: 0px;
 }
 
 #bk-home
@@ -136,5 +169,66 @@ nav
 
 #create-test
 {
+	form
+	{
+		label
+		{
+			margin-bottom: 10px;
 
+			&.time_label
+			{
+				margin: 0 20px 0 100px;
+			}
+		}
+
+		input[type=text]
+		{
+			width:350px;
+		}
+
+		.link-buttons
+		{
+			margin-top: 30px;
+			a
+			{
+				width:23%;
+				text-decoration: underline;
+				background:$secondary_color;
+				@include border-radius(5px);
+				margin: 0 0.5%;
+				font-size: 0.8em;
+			}
+		}
+
+		textarea
+		{
+			background:$dark_bg;
+			resize:vertical;
+			width: 100%;
+		}
+
+		.subsidiary
+		{
+			select
+			{
+				outline: 1px solid $secondary_color;
+			}
+		}
+
+		.new-question
+		{
+			background:$main_bg;
+			padding: 10px 15px;
+			margin-top: 30px;
+		}
+
+		button[type=submit].btn.submit
+		{
+			display: table;
+			margin-top: 30px;
+			width: 90%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
 }

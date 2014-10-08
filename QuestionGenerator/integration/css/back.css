@@ -1,28 +1,28 @@
-/* line 3, ../sass/back.scss */
+/* line 5, ../sass/back.scss */
 body {
   color: red;
 }
 
-/* line 7, ../sass/back.scss */
+/* line 9, ../sass/back.scss */
 h1 {
   font-size: 1.5em;
   text-decoration: none;
   margin-bottom: 15px;
 }
 
-/* line 14, ../sass/back.scss */
+/* line 16, ../sass/back.scss */
 h2 {
   font-size: 1.2em;
   text-decoration: underline;
 }
 
-/* line 21, ../sass/back.scss */
+/* line 23, ../sass/back.scss */
 nav {
   display: block;
   background: #eae9f4;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
-/* line 29, ../sass/back.scss */
+/* line 31, ../sass/back.scss */
 nav ul li {
   display: inline-block;
   margin-right: 25px;
@@ -30,12 +30,12 @@ nav ul li {
   font-size: 1.3em;
   text-transform: capitalize;
 }
-/* line 37, ../sass/back.scss */
+/* line 39, ../sass/back.scss */
 nav ul li:last-child {
   margin-right: 0;
 }
 
-/* line 44, ../sass/back.scss */
+/* line 46, ../sass/back.scss */
 .mini-nav {
   position: relative;
   float: right;
@@ -45,32 +45,61 @@ nav ul li:last-child {
   color: red;
   background: #eae9f4;
 }
-/* line 55, ../sass/back.scss */
+/* line 57, ../sass/back.scss */
 .mini-nav ul {
   display: block;
   text-align: center;
 }
-/* line 59, ../sass/back.scss */
+/* line 61, ../sass/back.scss */
 .mini-nav ul li {
   display: inline-block;
   padding: 0 15px;
   border-right: 1px solid black;
 }
-/* line 65, ../sass/back.scss */
+/* line 67, ../sass/back.scss */
 .mini-nav ul li:first-child {
   padding-left: 0;
 }
-/* line 70, ../sass/back.scss */
+/* line 72, ../sass/back.scss */
 .mini-nav ul li:last-child {
   border-right: 0;
   padding-right: 0;
 }
 
-/* line 83, ../sass/back.scss */
+/* line 81, ../sass/back.scss */
+form {
+  line-height: 1.8em;
+}
+/* line 84, ../sass/back.scss */
+form label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.1em;
+}
+/* line 91, ../sass/back.scss */
+form input[type=text], form input[type=password], form input[type=email] {
+  border: none;
+  outline: 1px solid rgba(255, 0, 0, 0.4);
+  padding: 5px;
+  color: #6795cb;
+}
+/* line 99, ../sass/back.scss */
+form select {
+  border: none;
+  outline: 1px solid rgba(255, 0, 0, 0.4);
+  padding: 0 5px;
+}
+
+/* line 107, ../sass/back.scss */
+form > div > div:first-child {
+  margin-bottom: 0px;
+}
+
+/* line 116, ../sass/back.scss */
 #bk-home nav ul {
   text-align: center;
 }
-/* line 86, ../sass/back.scss */
+/* line 119, ../sass/back.scss */
 #bk-home nav ul li {
   display: inline-block;
   width: 28%;
@@ -87,28 +116,80 @@ nav ul li:last-child {
   min-width: 150px;
   font-weight: bold;
 }
-/* line 103, ../sass/back.scss */
+/* line 136, ../sass/back.scss */
 #bk-home nav ul li:hover {
   color: #ff3232;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 109, ../sass/back.scss */
+/* line 142, ../sass/back.scss */
 #bk-home nav ul li a {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-/* line 119, ../sass/back.scss */
+/* line 152, ../sass/back.scss */
 #bk-home .results {
   margin-top: 30px;
 }
-/* line 123, ../sass/back.scss */
+/* line 156, ../sass/back.scss */
 #bk-home .results .result {
   margin: 0 1.5%;
 }
-/* line 128, ../sass/back.scss */
+/* line 161, ../sass/back.scss */
 #bk-home .results .view-results {
   padding: 15px 5px;
   margin: 5px 0 15px;
   background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 174, ../sass/back.scss */
+#create-test form label {
+  margin-bottom: 10px;
+}
+/* line 178, ../sass/back.scss */
+#create-test form label.time_label {
+  margin: 0 20px 0 100px;
+}
+/* line 184, ../sass/back.scss */
+#create-test form input[type=text] {
+  width: 350px;
+}
+/* line 189, ../sass/back.scss */
+#create-test form .link-buttons {
+  margin-top: 30px;
+}
+/* line 192, ../sass/back.scss */
+#create-test form .link-buttons a {
+  width: 23%;
+  text-decoration: underline;
+  background: #8accca;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0.5%;
+  font-size: 0.8em;
+}
+/* line 203, ../sass/back.scss */
+#create-test form textarea {
+  background: #a4a3ae;
+  resize: vertical;
+  width: 100%;
+}
+/* line 212, ../sass/back.scss */
+#create-test form .subsidiary select {
+  outline: 1px solid #8accca;
+}
+/* line 218, ../sass/back.scss */
+#create-test form .new-question {
+  background: #eae9f4;
+  padding: 10px 15px;
+  margin-top: 30px;
+}
+/* line 225, ../sass/back.scss */
+#create-test form button[type=submit].btn.submit {
+  display: table;
+  margin-top: 30px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
