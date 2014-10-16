@@ -1,6 +1,4 @@
-@import 'includes/back_vars';
-@import 'compass';
-
+@import 'includes/back_global';
 
 body
 {
@@ -189,6 +187,7 @@ form > div > div:first-child
 		.link-buttons
 		{
 			margin-top: 30px;
+			text-align: center;
 			a
 			{
 				width:23%;
@@ -220,13 +219,50 @@ form > div > div:first-child
 			background:$main_bg;
 			padding: 10px 15px;
 			margin-top: 30px;
+			position: relative;
+			textarea
+			{
+				height: 200px;
+			}
+
+			.qcm
+			{
+				border: 1px solid $secondary_color;
+				padding: 0px 20px;
+				width: 95%;
+				position: relative;
+				margin-top: 20px;
+
+				.ans
+				{
+					width: 80%;
+					float: left;
+
+					textarea
+					{
+						height: 100px;
+					}
+				}
+				.checkbox
+				{
+					float: right;
+					text-align: center;
+					width: 20%;
+					// margin-top: 50%;
+					label
+					{
+						width: 100%;
+						margin-top: 15%;
+					}
+				}
+			}
 		}
 
 		button[type=submit].btn.submit
 		{
 			display: table;
 			margin-top: 30px;
-			width: 90%;
+			width: 100%;
 			margin-right: auto;
 			margin-left: auto;
 		}

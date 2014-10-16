@@ -1,7 +1,0 @@
-parameters:
-#    backend_user_nav.example.class: Backend\UserNavBundle\Example
-
-services:
-#    backend_user_nav.example:
-#        class: %backend_user_nav.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

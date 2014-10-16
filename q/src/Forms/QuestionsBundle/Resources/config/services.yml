@@ -1,4 +1,0 @@
-services:
-#    forms_questions.example:
-#        class: Forms\QuestionsBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]

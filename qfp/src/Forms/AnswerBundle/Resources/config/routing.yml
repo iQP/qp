@@ -1,3 +1,0 @@
-forms_answer_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: FormsAnswerBundle:Default:index }

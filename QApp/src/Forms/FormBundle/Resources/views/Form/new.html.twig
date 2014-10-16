@@ -1,9 +1,158 @@
 {% extends 'BackBackBundle::layout.html.twig' %}
 
 {% block body -%}
-    <h1>Form creation</h1>
 
+
+<nav>
+    <div class="content">
+        <ul>
+            <li><a href="#">Tests</a></li>
+            <li><a href="#">polls</a></li>
+            <li><a href="#">forms</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="create-test">
+    <div class="content">
+
+
+        <div class="test-info">
+            <h1>Création d'un nouveau Test</h1>
+            form(start_form)
     {{ form(form) }}
+                <div>
+                    <div>
+                        <label for="nom">Nommer ce test</label>
+                        <input type="text" placeholder="Nom du test">
+                    </div>
+
+                    <div class="subsidiary">
+                        <label for="">Catégorie</label>
+                        <select name="" id="">
+                            <option value="0">Choisissez une catégorie</option>
+                        </select>
+                        
+                        <label for="time" class="time_label">Temps de réponse</label>
+                        
+                        <select name="" id="">
+                            <option value="0">00</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="0">00</option>
+                        </select>
+                    </div>
+
+
+                    <div class="new-question">
+                        <a href="#" class="ico-del"><i></i></a>
+                        <h1>Question N° 1</h1>
+
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Saisissez votre question ici"></textarea>
+
+                        <div class="category">
+                            <label for="cat">Catégorie </label>
+                            <select name="" id="" class="subsidiary">
+                                <option value="0">(Facultatif)</option>
+                                <option value="0">Champs</option>
+                            </select>
+                        </div>
+
+                        <div class="ans-type">
+                            <span class="ans-type">Type de réponse texte court</span>
+                        </div>
+
+                    </div><!-- end new-question -->
+
+
+                    <div class="new-question">
+                        <a href="#" class="ico-del"><i></i></a>
+                        <h1>Question N° 2</h1>
+
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Saisissez votre question ici"></textarea>
+
+                        <div class="category">
+                            <label for="cat">Catégorie </label>
+                            <select name="" id="" class="subsidiary">
+                                <option value="0">(Facultatif)</option>
+                                <option value="0">Champs</option>
+                            </select>
+                        </div>
+
+                        <div class="ans-type">
+                            <span class="ans-type">Type de réponse texte long</span>
+                        </div>
+
+                    </div><!-- end new-question -->
+
+
+                    <div class="new-question">
+                        <a href="#" class="ico-del"><i></i></a>
+                        <h1>Question N° 3</h1>
+
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Saisissez votre question ici"></textarea>
+
+                        <div class="category">
+                            <label for="cat">Catégorie </label>
+                            <select name="" id="" class="subsidiary">
+                                <option value="0">(Facultatif)</option>
+                                <option value="0">Champs</option>
+                            </select>
+                        </div>
+
+                        <div class="ans-type">
+                            <span class="ans-type">Type de réponse QCM choix unique</span>
+                        </div>
+
+                        <div class="qcm">
+                            <a href="#" class="ico-del"><i></i></a>
+                            <div class="ans">
+                                <label for="rep_1">Réponse n° 1</label>
+                                <textarea name="rep_1" id="rep_1" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label for="checkbox">Correcte</label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        
+
+                        <div class="qcm">
+                            <a href="#" class="ico-del"><i></i></a>
+                            <div class="ans">
+                                <label for="rep_2">Réponse n° 2</label>
+                                <textarea name="rep_2" id="rep_2" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label for="checkbox">Correcte</label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <a href="#" class="add_qcma"> > Ajouter une option de réponse</a>
+
+                    </div><!-- end new-question -->
+
+
+
+                    <div class="link-buttons">
+                        <a href="#" class="btn">Ajouter une question Texte court</a>
+                        <a href="#" class="btn">Ajouter une question Texte Long</a>
+                        <a href="#" class="btn">Ajouter une question Qcm</a>
+                        <a href="#" class="btn">Ajouter une question Qcm</a>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="create-form" name="create-form" class="btn submit">Créer le questionnaire</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div><!-- End .content -->
+</div><!--  End #create-test -->
 
     <a href="#" class="add_textq clear" style="padding:5px;line-height:28px;">Ajouter une question de type texte</a>
 

@@ -1,0 +1,18 @@
+@import 'compass';
+@import "normalize";
+@import 'includes/global';
+@import 'includes/back_vars';
+
+
+// remove button "no-entry sign"
+
+.ico-del
+{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background:transparent url('../img/ico-del.png') left top no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
