@@ -500,7 +500,7 @@ form > div > div:first-child {
 /* line 228, ../sass/back.scss */
 #create-test form .new-question .qcm {
   border: 1px solid #8accca;
-  padding: 0px 20px;
+  padding: 0px 20px 10px;
   width: 95%;
   position: relative;
   margin-top: 20px;

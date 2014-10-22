@@ -2,365 +2,112 @@
 
 {% block body -%}
 
-
-<nav>
-    <div class="content">
-        <ul>
-            <li><a href="#">Tests</a></li>
-            <li><a href="#">polls</a></li>
-            <li><a href="#">forms</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div id="create-test">
-    <div class="content">
-
-
-        <div class="test-info">
-            <h1>Création d'un nouveau Test</h1>
-            form(start_form)
     {{ form(form) }}
-                <div>
-                    <div>
-                        <label for="nom">Nommer ce test</label>
-                        <input type="text" placeholder="Nom du test">
-                    </div>
 
-                    <div class="subsidiary">
-                        <label for="">Catégorie</label>
-                        <select name="" id="">
-                            <option value="0">Choisissez une catégorie</option>
-                        </select>
-                        
-                        <label for="time" class="time_label">Temps de réponse</label>
-                        
-                        <select name="" id="">
-                            <option value="0">00</option>
-                        </select>
-                        <select name="" id="">
-                            <option value="0">00</option>
-                        </select>
-                    </div>
-
-
-                    <div class="new-question">
-                        <a href="#" class="ico-del"><i></i></a>
-                        <h1>Question N° 1</h1>
-
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Saisissez votre question ici"></textarea>
-
-                        <div class="category">
-                            <label for="cat">Catégorie </label>
-                            <select name="" id="" class="subsidiary">
-                                <option value="0">(Facultatif)</option>
-                                <option value="0">Champs</option>
-                            </select>
-                        </div>
-
-                        <div class="ans-type">
-                            <span class="ans-type">Type de réponse texte court</span>
-                        </div>
-
-                    </div><!-- end new-question -->
-
-
-                    <div class="new-question">
-                        <a href="#" class="ico-del"><i></i></a>
-                        <h1>Question N° 2</h1>
-
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Saisissez votre question ici"></textarea>
-
-                        <div class="category">
-                            <label for="cat">Catégorie </label>
-                            <select name="" id="" class="subsidiary">
-                                <option value="0">(Facultatif)</option>
-                                <option value="0">Champs</option>
-                            </select>
-                        </div>
-
-                        <div class="ans-type">
-                            <span class="ans-type">Type de réponse texte long</span>
-                        </div>
-
-                    </div><!-- end new-question -->
-
-
-                    <div class="new-question">
-                        <a href="#" class="ico-del"><i></i></a>
-                        <h1>Question N° 3</h1>
-
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Saisissez votre question ici"></textarea>
-
-                        <div class="category">
-                            <label for="cat">Catégorie </label>
-                            <select name="" id="" class="subsidiary">
-                                <option value="0">(Facultatif)</option>
-                                <option value="0">Champs</option>
-                            </select>
-                        </div>
-
-                        <div class="ans-type">
-                            <span class="ans-type">Type de réponse QCM choix unique</span>
-                        </div>
-
-                        <div class="qcm">
-                            <a href="#" class="ico-del"><i></i></a>
-                            <div class="ans">
-                                <label for="rep_1">Réponse n° 1</label>
-                                <textarea name="rep_1" id="rep_1" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="checkbox">
-                                <label for="checkbox">Correcte</label>
-                                <input type="checkbox">
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        
-
-                        <div class="qcm">
-                            <a href="#" class="ico-del"><i></i></a>
-                            <div class="ans">
-                                <label for="rep_2">Réponse n° 2</label>
-                                <textarea name="rep_2" id="rep_2" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="checkbox">
-                                <label for="checkbox">Correcte</label>
-                                <input type="checkbox">
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        
-                        <a href="#" class="add_qcma"> > Ajouter une option de réponse</a>
-
-                    </div><!-- end new-question -->
-
-
-
-                    <div class="link-buttons">
-                        <a href="#" class="btn">Ajouter une question Texte court</a>
-                        <a href="#" class="btn">Ajouter une question Texte Long</a>
-                        <a href="#" class="btn">Ajouter une question Qcm</a>
-                        <a href="#" class="btn">Ajouter une question Qcm</a>
-                    </div>
-
-                    <div>
-                        <button type="submit" id="create-form" name="create-form" class="btn submit">Créer le questionnaire</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </div><!-- End .content -->
-</div><!--  End #create-test -->
 
     <a href="#" class="add_textq clear" style="padding:5px;line-height:28px;">Ajouter une question de type texte</a>
 
 
     <a href="#" class="add_qcmq clear" style="padding:5px;line-height:28px;">Ajouter une question de type QCM</a>
 
+
     <script type="text/javascript">
-      $(document).ready(function(){
-
-        // On récupère la balise div en question qui contient l'attribut "data-prototype"
-        var $container_textq = $('div#forms_formbundle_form_textq');
+        // Récupération des data-prototype pour l'ajout de questions
+        //      textq => question de type texte
+        //      qcmq => Questions de type qcm
+        var container_textq = $('div#forms_formbundle_form_textq');
         var $container_qcmq = $('div#forms_formbundle_form_qcmq');
-
-        // On ajouter un nouveau champ à chaque clic sur le lien d'ajout
-        $('a.add_textq').click(function(e){
-          addTextq($container_textq);
-          e.preventDefault();
-          return false;
-        });
-
-        $('a.add_qcmq').click(function(e){
-          addQcmq($container_qcmq);
-          e.preventDefault();
-          return false;
-        });
-
-        // On définit un compteur unique pour nommer les chmps qu'on va ajouter
-        var index_textq = $container_textq.find(':input').length;
-        var index_qcmq = $container_qcmq.find(':input').length;
-
-        var index = index_textq + index_qcmq;
-
-
-        function addTextq($container_textq)
-        {
-          var $prototype_textq = $($container_textq.attr('data-prototype').replace(/__name__label__/g, 'Question Texte n°' + (index_textq+1)));
-
-          addDeleteLink($prototype_textq);
-
-          $container_textq.append($prototype_textq);
-
-          index++;
-          index_textq++;
-        }
-
-        function addQcmq($container_qcmq)
-        {
-          var $add_qcma = $('<a href="#" class="add_qcma">Ajouter une option de réponse</a>');
-
-          var $prototype_qcmq = $($container_qcmq.attr('data-prototype').replace(/__name__label__/g, 'Question QCM n°' + (index+1)).replace(/__name__/g, index));
-
-          addDeleteLink($prototype_qcmq);
-
-          $container_qcmq.append($prototype_qcmq).append($add_qcma);
-
-          index++;
-          index_qcmq++;
-
-          var $container_qcma = $('div#forms_formbundle_form_qcmq_' + (index_qcmq-1) + '_qcma');
-          $('a.add_qcma').click(function(e){
-            addQcma($container_qcma);
-            e.preventDefault();
-            return false;
-          });
-
-          var index_qcma = $container_qcma.find(':input').length;
-
-          function addQcma($container_qcma)
-          {
-            var $prototype_qcma = $($container_qcma).attr('data-prototype').replace(/__qcma__label__/g,'Réponse n°' + (index_qcma+1)).replace(/__qcma__/g, index_qcma);
-
-            $container_qcma.append($prototype_qcma);
-
-            index_qcma++;
-          }
-
-        }
-
-
-        function addDeleteLink($prototype)
-        {
-          $deleteLink = $('<a href="#" class""> Supprimer</a>');
-
-          $prototype.append($deleteLink);
-
-          $deleteLink.click(function(e){
-            $prototype.remove();
-            e.preventDefault();
-            return false;
-          })
-        }
-
-      });
     </script>
 
+    <script type="text/javascript">
+      // $(document).ready(function(){
 
-<script type="text/javascript">
-//   $(document).ready(function() {
-//     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
-//     var $container_textq = $('div#forms_formbundle_form_textq');
-// // rajoute pour la partie qcm
-//     var $container_qcmq = $('div#forms_formbundle_form_qcmq');
+      //   // On récupère la balise div en question qui contient l'attribut "data-prototype"
+      //   var $container_textq = $('div#forms_formbundle_form_textq');
+      //   var $container_qcmq = $('div#forms_formbundle_form_qcmq');
 
-//     // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
-//     $('a.add_textq').click(function(e) {
-//       addTextq($container_textq);
-//       e.preventDefault(); 
-//       return false;
-//     });
+      //   // On ajouter un nouveau champ à chaque clic sur le lien d'ajout
+      //   $('a.add_textq').click(function(e){
+      //     addTextq($container_textq);
+      //     e.preventDefault();
+      //     return false;
+      //   });
 
-//   // rajoute pour la partie qcm
-//     $('a.add_qcmq').click(function(e){
-//         addQcmq($container_qcmq);
-//         e.preventDefault();
-//         return false;
-//     });
+      //   $('a.add_qcmq').click(function(e){
+      //     addQcmq($container_qcmq);
+      //     e.preventDefault();
+      //     return false;
+      //   });
 
+      //   // On définit un compteur unique pour nommer les chmps qu'on va ajouter
+      //   var index_textq = $container_textq.find(':input').length;
+      //   var index_qcmq = $container_qcmq.find(':input').length;
 
-//     // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
-//     var index = $container_textq.find(':input').length;
-
-//     var index_qcmq = $container_qcmq.find(':input').length;
-
-//     // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
-//     // if (index == 0) {
-//     //   addTextq($container_textq);
-//     // } else {
-//     //   // Pour chaque catégorie déjà existante, on ajoute un lien de suppression
-//     //   $container_textq.children('div').each(function() {
-//     //     addDeleteLink($(this));
-//     //   });
-//     // }
-
-//     // La fonction qui ajoute un formulaire Categorie
-//     function addTextq($container_textq) {
-//       // Dans le contenu de l'attribut « data-prototype », on remplace :
-//       // - le texte "__name__label__" qu'il contient par le label du champ
-//       // - le texte "__name__" qu'il contient par le numéro du champ
-//       var $prototype = $($container_textq.attr('data-prototype').replace(/__name__label__/g, 'Question de type Texte n°' + (index+1))
-//           .replace(/__name__/g, index));
-
-//       // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
-//       addDeleteLink($prototype);
-
-//       // On ajoute le prototype modifié à la fin de la balise <div>
-//       $container_textq.append($prototype);
-
-//       // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
-//       index++;
-//     }
-
-//     function addQcmq($container_qcmq)
-//     {
-//       var $add_qcma = $('<a href="#" class="add_qcma">Ajouter une option de réponse</a>');
+      //   var index = index_textq + index_qcmq;
 
 
-//       var $prototype_qcmq = $($container_qcmq.attr('data-prototype').replace(/__name__label__/g, 'Question de type QCM n° ' + (index+1)).replace(/__name__/g, index));
+      //   function addTextq($container_textq)
+      //   {
+      //     var $prototype_textq = $($container_textq.attr('data-prototype').replace(/__name__label__/g, 'Question Texte n°' + (index_textq+1)));
 
-//       addDeleteLink($prototype_qcmq);
-//       $container_qcmq.append($prototype_qcmq).append($add_qcma);
+      //     addDeleteLink($prototype_textq);
 
-//       index++;
-//       index_qcmq++;
+      //     $container_textq.append($prototype_textq);
 
-      
-// // section pour ajouter les réponses qcm ---------------------
-//       var $container_qcma = $('div#forms_formbundle_form_qcmq_' + (index_qcmq-1) + '_qcma');
+      //     index++;
+      //     index_textq++;
+      //   }
+
+      //   function addQcmq($container_qcmq)
+      //   {
+      //     var $add_qcma = $('<a href="#" class="add_qcma">Ajouter une option de réponse</a>');
+
+      //     var $prototype_qcmq = $($container_qcmq.attr('data-prototype').replace(/__name__label__/g, 'Question QCM n°' + (index+1)).replace(/__name__/g, index));
+
+      //     addDeleteLink($prototype_qcmq);
+
+      //     $container_qcmq.append($prototype_qcmq).append($add_qcma);
+
+      //     index++;
+      //     index_qcmq++;
+
+      //     var $container_qcma = $('div#forms_formbundle_form_qcmq_' + (index_qcmq-1) + '_qcma');
+      //     $('a.add_qcma').click(function(e){
+      //       addQcma($container_qcma);
+      //       e.preventDefault();
+      //       return false;
+      //     });
+
+      //     var index_qcma = $container_qcma.find(':input').length;
+
+      //     function addQcma($container_qcma)
+      //    {
+      //       console.info($($container_qcma).attr('data-prototype'));
+      //       var $prototype_qcma = $($container_qcma).attr('data-prototype').replace(/__qcma__label__/g,'Réponse n°' + (index_qcma+1)).replace(/__qcma__/g, index_qcma);
+
+      //       $container_qcma.append($prototype_qcma);
+
+      //       index_qcma++;
+      //     }
+
+      //   }
 
 
-//       $('a.add_qcma').click(function(e){
-//         addQcma($container_qcma);
-//         e.preventDefault();
-//         return false;
-//       });
+      //   function addDeleteLink($prototype)
+      //   {
+      //     $deleteLink = $('<a href="#" class""> Supprimer</a>');
 
-//       var index_qcma = $container_qcma.find(':input').length;
+      //     $prototype.append($deleteLink);
 
-//       function addQcma($container_qcma)
-//       {
-//         var $prototype_qcma = $($container_qcma).attr('data-prototype').replace(/__qcma__label__/g, 'Réponse n°' + (index_qcma+1)).replace(/__qcma__/g, index_qcma);
+      //     $deleteLink.click(function(e){
+      //       $prototype.remove();
+      //       e.preventDefault();
+      //       return false;
+      //     })
+      //   }
 
-
-
-//         $container_qcma.append($prototype_qcma);
-
-//         index_qcma++;
-// // fin section pour ajouter les réponses qcm -----------------
-//       }
-
-//     }
-
-//     // La fonction qui ajoute un lien de suppression d'une catégorie
-//     function addDeleteLink($prototype) {
-//       // Création du lien
-//       $deleteLink = $('<a href="#" class="">Supprimer</a>');
-
-//       // Ajout du lien
-//       $prototype.append($deleteLink);
-
-//       // Ajout du listener sur le clic du lien
-//       $deleteLink.click(function(e) {
-//         $prototype.remove();
-//         e.preventDefault(); // évite qu'un # apparaisse dans l'URL
-//         return false;
-//       });
-//     }
-//   });
-</script>
+      // });
+    </script>
 <ul class="record_actions">
     <li>
         <a href="{{ path('f_form') }}">
